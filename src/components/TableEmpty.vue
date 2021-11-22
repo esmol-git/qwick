@@ -29,7 +29,7 @@
       :items-per-page="itemsPerPage"
       hide-default-footer
       sort-by="calories"
-      class="elevation-1"
+      class="table"
       @page-count="pageCount = $event"
     >
       <template v-slot:[`item.calories`]="{ item }">

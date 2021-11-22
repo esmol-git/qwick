@@ -1,0 +1,21 @@
+.table {
+	th {
+		background-color: #f1f3f9;
+		color: #a6acc4 !important;
+	}
+	td,
+	th {
+		vertical-align: middle;
+		text-align: center;
+		border: none !important;
+	}
+	td:not(:first-child) {
+		text-align: center !important;
+	}
+	tr:nth-child(odd) {
+		background-color: #f8f9fd;
+	}
+	tr:nth-child(even) {
+		background-color: #f1f3f9;
+	}
+}

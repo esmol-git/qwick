@@ -13,7 +13,15 @@
       </v-card-text>
 
       <v-card-actions class="pa-0 mt-4">
-        <v-btn color="primary" block height="38" @click="save"> Save </v-btn>
+        <v-btn
+          color="deep-purple accent-4"
+          dark
+          block
+          height="38"
+          @click="save"
+        >
+          Save
+        </v-btn>
       </v-card-actions>
     </v-card>
   </div>

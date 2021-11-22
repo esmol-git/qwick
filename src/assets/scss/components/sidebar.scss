@@ -1,0 +1,17 @@
+.menu__item-wrapper:last-child {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+}
+.menu__item-wrapper:nth-last-child(-2n + 2) {
+	position: absolute;
+	bottom: 56px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+}
+.active {
+	color: red;
+}

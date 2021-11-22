@@ -1,14 +1,16 @@
 <template>
   <v-app>
-    <navbar @drawer="menuSwitcher" :drawer="drawer" />
+    <navbar
+      @drawer="menuSwitcher"
+      :drawer="drawer"
+      :icon="
+        drawer ? 'mdi-format-indent-increase' : 'mdi-format-indent-decrease'
+      "
+    />
     <sidebar @drawer="menuSwitcher" :drawer="drawer" />
-    <v-main>
-      <v-container>
-        <router-view></router-view>
-      </v-container>
-    </v-main>
-
-    <!-- <v-footer app> </v-footer> -->
+    <v-container fluid>
+      <router-view></router-view>
+    </v-container>
   </v-app>
 </template>
 

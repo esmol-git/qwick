@@ -1,0 +1,10 @@
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+	width: 0.6rem;
+	background: rgba(#a6acc4, 0.5);
+
+	&-thumb {
+		background: #272525;
+		border-radius: 0.5rem;
+	}
+}

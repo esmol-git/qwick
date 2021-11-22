@@ -6,15 +6,6 @@
       :itemsPerPage="7"
       :count="desserts.length"
     />
-    <table-empty
-      :headers="lokoHeaders"
-      :items="lokoItems"
-      :itemsPerPage="4"
-      :count="lokoItems.length"
-      @add="onAdd"
-      @edit="onEdit"
-      @deleteItem="deleteItem"
-    />
   </div>
 </template>
 
@@ -25,31 +16,6 @@ export default {
   components: { TableEmpty },
   data() {
     return {
-      lokoHeaders: [
-        {
-          text: "ID",
-          align: "start",
-          sortable: false,
-          value: "id",
-        },
-        {
-          text: "Name",
-
-          value: "name",
-        },
-        {
-          text: "Age",
-          value: "age",
-        },
-      ],
-      lokoItems: [
-        { id: 1, name: "Ivan", age: 18 },
-        { id: 2, name: "Evgen", age: 22 },
-        { id: 3, name: "Taras", age: 31 },
-        { id: 4, name: "Matvei", age: 33 },
-        { id: 5, name: "Goshan", age: 34 },
-        { id: 6, name: "Petr", age: 25 },
-      ],
       headers: [
         {
           text: "Dessert (100g serving)",
