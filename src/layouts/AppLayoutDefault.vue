@@ -1,14 +1,8 @@
 <template>
   <v-app>
-    <navbar
-      @drawer="menuSwitcher"
-      :drawer="drawer"
-      :icon="
-        drawer ? 'mdi-format-indent-increase' : 'mdi-format-indent-decrease'
-      "
-    />
-    <sidebar @drawer="menuSwitcher" :drawer="drawer" />
-    <v-container fluid>
+    <navbar :title="$route.name" />
+    <sidebar />
+    <v-container>
       <router-view></router-view>
     </v-container>
   </v-app>
@@ -19,11 +13,14 @@ import Navbar from "../components/Navbar.vue";
 import Sidebar from "../components/Sidebar.vue";
 export default {
   components: { Navbar, Sidebar },
-  data: () => ({ drawer: true }),
-  methods: {
-    menuSwitcher(drawer) {
-      this.drawer = drawer;
+  data: () => ({}),
+  props: {
+    title: {
+      type: String,
+      default: "",
     },
   },
+  methods: {},
+  computed: {},
 };
 </script>
