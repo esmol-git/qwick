@@ -2,7 +2,7 @@
   <v-app>
     <navbar :title="$route.name" />
     <sidebar />
-    <v-container>
+    <v-container fluid>
       <router-view></router-view>
     </v-container>
   </v-app>

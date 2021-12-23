@@ -69,7 +69,6 @@ const routes = [
       layout: "AppLayoutDefault",
     },
   },
-
 ];
 
 const router = new VueRouter({
