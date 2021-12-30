@@ -2,8 +2,8 @@
   <div>
     <v-navigation-drawer
       app
-      color="#3A78F2"
-      width="270"
+      color="primary"
+      width="300"
       dark
       permanent
       class="navigation-drawer"
@@ -14,7 +14,7 @@
         <div class="menu__item-wrapper" v-for="(item, i) in menuList" :key="i">
           <v-list-item class="menu__item" :to="item.to">
             <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon active="active">{{ item.icon }}</v-icon>
             </v-list-item-icon>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
@@ -51,7 +51,9 @@
           >Политика конфиденциальности</a
         >
         <a href="#" class="navigation__footer-link">Все права защищены</a>
-        <a href="#" class="navigation__footer-support"></a>
+        <v-btn color="white" fab width="66" height="66" @click="$emit('click')">
+          <v-icon large color="primary" dark>mdi-headset</v-icon>
+        </v-btn>
       </div>
     </v-navigation-drawer>
   </div>
@@ -162,15 +164,6 @@ export default {
       margin-bottom: 24px;
     }
   }
-  &-support {
-    display: block;
-    width: 66px;
-    height: 66px;
-    background-color: #fff;
-    border-radius: 100%;
-    background-image: url("../assets/image/icons/support.svg");
-    background-position: center;
-  }
 }
 .menu__item-wrapper {
   padding: 0 32px 0 23px;
@@ -213,7 +206,7 @@ export default {
     font-weight: bold;
   }
   &.v-list-item--active .v-icon {
-    color: #4f8be4;
+    color: #9575cd;
   }
 }
 </style>

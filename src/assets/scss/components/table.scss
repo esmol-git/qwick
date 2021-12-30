@@ -1,8 +1,22 @@
 .table {
+    // border: 1px solid red;
+    &-inner{
+        border-radius: 18px;
+        overflow: hidden;
+    }
 	th {
 		background-color: #f1f3f9;
-		color: #a6acc4 !important;
+		// color: rgba(#fff, .8) !important;
+        color: rgb(41, 39, 39) !important;
+        font-size: 16px !important;
+        font-weight: 700;
+        &::first-letter{
+            text-transform: uppercase;
+        }
 	}
+    tr td:last-child{
+        text-align: right !important;
+    }
 	td,
 	th {
 		vertical-align: middle;
@@ -18,4 +32,13 @@
 	tr:nth-child(even) {
 		background-color: #f1f3f9;
 	}
+}
+.v-data-table-header__icon{
+    // color: rgba(#fff, .8) !important;
+    color: rgb(41, 39, 39) !important;
+
+}
+.theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper){
+		background-color: rgba(#fff, .5) !important;
+
 }

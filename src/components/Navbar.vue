@@ -14,14 +14,34 @@
           append-icon="mdi-magnify"
           height="46"
           width="265"
-          background-color="#F5F7FB"
-          color="#3A78F2"
+          border-radius="15"
+          outlined
+          color="primary"
         ></v-text-field>
       </div>
       <avatar />
-      <v-btn icon fab small color="#979DBB" dense>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      <v-menu offset-y origin="center center" transition="scale-transition">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            fab
+            small
+            color="#979DBB"
+            dense
+            dark
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item v-for="(item, i) in items" :key="i" :to="item.to">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
   </div>
 </template>
@@ -31,7 +51,13 @@ import Avatar from "@/components/ui/Avatar.vue";
 export default {
   components: { Avatar },
   name: "Navbar",
-  data: () => ({}),
+  data: () => ({
+    items: [
+      { title: "Click Me", to: "/" },
+      { title: "Settings ", to: "/family" },
+      { title: "Logout", to: "/reports" },
+    ],
+  }),
   props: {
     drawer: {
       type: Boolean,
@@ -61,11 +87,10 @@ export default {
 
 <style lang="scss" scoped>
 .main-title {
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 28px;
   line-height: 33px;
   color: #1c1d20;
-
   opacity: 0.8;
 }
 .navbar {

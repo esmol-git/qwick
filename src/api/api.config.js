@@ -1,6 +1,10 @@
 export const BACKEND_ENDPOINTS = {
-  posts: {
+  users: {
     post: "GET",
-    url: "posts?_start=0&_end=10",
+    url: "users/",
+  },
+  user: {
+    post: "GET",
+    url: "users/",
   },
 };

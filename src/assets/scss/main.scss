@@ -1,11 +1,19 @@
 @import url(../scss/utils/reset.scss);
+@import url(../scss/utils/variables.scss);
+@import url(../scss/fonts.scss);
+@import url(../scss/utils/mixins.scss);
 @import url(../scss/ui.scss);
 @import url(../scss/components/sidebar.scss);
 @import url(../scss/components/table.scss);
-
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
 #app,
-.v-application {
-	font-family: "PTRootUI" !important;
+.v-application  {
+	font-family: "OpenSans";
 	font-weight: 400;
 	p {
 		margin: 0;
@@ -29,6 +37,4 @@
 .v-application--wrap {
 	min-height: calc(100vh - 48px);
 }
-.container {
-	padding: 0 40px !important;
-}
+

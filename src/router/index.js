@@ -16,15 +16,23 @@ const routes = [
   {
     path: "/family",
     name: "ОФС",
-    component: () => import("../views/Family.vue"),
+    component: () => import("../views/Family"),
     meta: {
       layout: "AppLayoutDefault",
     },
   },
   {
+    path: "/family/user/:userId",
+    name: "User",
+    component: () => import("../views/User.vue"),
+    meta: {
+        requiresAuth: true,
+    },
+},
+  {
     path: "/regulatioms",
     name: "Регламенты",
-    component: () => import("../views/Regulations.vue"),
+    component: () => import("../views/Regulations"),
     meta: {
       layout: "AppLayoutDefault",
     },
@@ -32,7 +40,7 @@ const routes = [
   {
     path: "/duties",
     name: "Мои обязанности",
-    component: () => import("../views/Duties.vue"),
+    component: () => import("../views/Duties"),
     meta: {
       layout: "AppLayoutDefault",
     },
@@ -40,7 +48,7 @@ const routes = [
   {
     path: "/reports",
     name: "Отчеты",
-    component: () => import("../views/Reports.vue"),
+    component: () => import("../views/Reports"),
     meta: {
       layout: "AppLayoutDefault",
     },
@@ -48,7 +56,7 @@ const routes = [
   {
     path: "/communications",
     name: "Коммуникации",
-    component: () => import("../views/Сommunications.vue"),
+    component: () => import("../views/Сommunications"),
     meta: {
       layout: "AppLayoutDefault",
     },
@@ -56,7 +64,7 @@ const routes = [
   {
     path: "/staff",
     name: "Сотрудники",
-    component: () => import("../views/Staff.vue"),
+    component: () => import("../views/Staff"),
     meta: {
       layout: "AppLayoutDefault",
     },
@@ -64,9 +72,25 @@ const routes = [
   {
     path: "/payment",
     name: "Оплата",
-    component: () => import("../views/Payment.vue"),
+    component: () => import("../views/Payment"),
     meta: {
       layout: "AppLayoutDefault",
+    },
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/auth/Login"),
+    meta: {
+      layout: "AppLayoutAuth",
+    },
+  },
+  {
+    path: "/registration",
+    name: "Registration",
+    component: () => import("../views/auth/Registration"),
+    meta: {
+      layout: "AppLayoutAuth",
     },
   },
 ];
